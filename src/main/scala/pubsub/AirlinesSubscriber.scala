@@ -28,6 +28,7 @@ object AirlinesSubscriber {
   }
   def main(argv: Array[String]): Unit ={
     Logger.getLogger("org").setLevel(Level.ERROR)
+    Logger.getLogger("org.apache.spark.storage").setLevel(Level.ERROR)
     val projectID = "starlit-channel-317607"
     val windowLength = 60
     val slidingInterval = 10
