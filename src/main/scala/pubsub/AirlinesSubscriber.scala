@@ -61,8 +61,9 @@ object AirlinesSubscriber {
     sorted_.foreachRDD((rdd,time) => {
       println(rdd.count())
       rdd.collect().take(10).foreach(println)
+      println("next batch ......")
     })
-    println("next batch ......")
+
 
     """
     reduceByAgeAndFriends.foreachRDD((rdd) => {
